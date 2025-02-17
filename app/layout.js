@@ -1,4 +1,6 @@
 import "./globals.css";
+import MainLayout from "@/components/MainLayout";
+import MenuContextProvider from "@/context/MenuContext";
 
 
 export const metadata = {
@@ -10,7 +12,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        {children}
+      <MenuContextProvider>
+        <MainLayout>
+            {children}
+        </MainLayout>
+          </MenuContextProvider>
       </body>
     </html>
   );

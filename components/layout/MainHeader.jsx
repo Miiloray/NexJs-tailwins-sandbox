@@ -3,6 +3,7 @@ import React, {useContext} from 'react';
 import {FaBars} from "react-icons/fa";
 import {MenuContext} from "@/context/MenuContext";
 import UserAreaSelectBox from "@/components/layout/UserAreaSelectBox";
+import LanguageSelectBox from "@/components/layout/LanguageSelectBox";
 
 const MainHeader = () => {
     const {toggle} = useContext(MenuContext);
@@ -12,6 +13,11 @@ const MainHeader = () => {
                 Brand
             </div>
             <div className="flex justify-center items-center gap-4">
+
+                <div>
+                    <LanguageSelectBox></LanguageSelectBox>
+                </div>
+
                 <div onClick={toggle} className="lg:hidden">
                     <FaBars className="cursor-pointer"> </FaBars>
                 </div>

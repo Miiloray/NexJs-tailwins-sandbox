@@ -2,6 +2,7 @@
 import React, {useContext} from 'react';
 import {FaBars} from "react-icons/fa";
 import {MenuContext} from "@/context/MenuContext";
+import UserAreaSelectBox from "@/components/layout/UserAreaSelectBox";
 
 const MainHeader = () => {
     const {toggle} = useContext(MenuContext);
@@ -14,7 +15,9 @@ const MainHeader = () => {
                 <div onClick={toggle} className="lg:hidden">
                     <FaBars className="cursor-pointer"> </FaBars>
                 </div>
-                <div> User Area</div>
+                <div>
+                <UserAreaSelectBox> </UserAreaSelectBox>
+                </div>
             </div>
         </div>
     )

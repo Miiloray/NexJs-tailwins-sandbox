@@ -1,7 +1,7 @@
 "use client"
 import React, {useContext} from 'react';
 import Link from "next/link";
-import MainHeader from "@/components/MainHeader";
+import MainHeader from "@/components/layout/MainHeader";
 import {MenuContext} from "@/context/MenuContext";
 
 import {AiOutlineHome} from "react-icons/ai"
@@ -22,7 +22,7 @@ const MainLayout = ({children}) => {
                             <li className="flex justify-start items-center hover:bg-blue-200 hover:text-blue-800 rounded-xl p-2">
                                 <AiOutlineHome className="mr-2">
                                 </AiOutlineHome>
-                                <Link href="/"> Home</Link>
+                                <Link href="/public"> Home</Link>
                             </li>
 
                             <li className="flex justify-start items-center hover:bg-blue-200 hover:text-blue-800 rounded-xl p-2">
